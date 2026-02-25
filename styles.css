@@ -1,0 +1,505 @@
+/**
+ * 财富自由计算器 - 样式表
+ * 响应式设计、移动优先
+ */
+
+:root {
+  --primary-color: #0d6efd;
+  --success-color: #198754;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #0dcaf0;
+  --dark-color: #212529;
+  --light-color: #f8f9fa;
+  --border-radius: 0.5rem;
+  --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px 0;
+  color: #333;
+}
+
+.container {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+
+/* ============ 标题样式 ============ */
+
+#pageTitle {
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+#pageSubtitle {
+  color: var(--success-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  min-height: 1.5em;
+}
+
+/* ============ 卡片样式 ============ */
+
+.card {
+  border: 2px solid #e9ecef;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card.border-primary {
+  border-top-width: 4px;
+  border-top-color: var(--primary-color);
+}
+
+.card.border-danger {
+  border-top-width: 4px;
+  border-top-color: var(--danger-color);
+}
+
+.card.border-success {
+  border-top-width: 4px;
+  border-top-color: var(--success-color);
+}
+
+/* ============ 表单样式 ============ */
+
+.form-label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-control,
+.input-group input {
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-control:focus,
+.input-group input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  outline: none;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.input-group input {
+  flex: 1;
+  min-width: 0;
+}
+
+.input-group-text {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 0.6rem 0.75rem;
+  font-weight: 600;
+  color: #666;
+  border-radius: 0.375rem;
+}
+
+.btn {
+  font-weight: 600;
+  border-radius: 0.375rem;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.1rem;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.btn-success:hover {
+  background-color: #157347;
+  border-color: #157347;
+}
+
+.btn-outline-secondary {
+  color: #6c757d;
+  border-color: #dee2e6;
+  background-color: white;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+small {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+/* ============ 表格样式 ============ */
+
+.table {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.table thead {
+  background-color: var(--dark-color);
+}
+
+.table thead th {
+  border-bottom: 2px solid #dee2e6;
+  font-weight: 600;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.table tbody td {
+  padding: 0.85rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #e9ecef;
+  vertical-align: middle;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9fa !important;
+}
+
+.table-light {
+  background-color: #f8f9fa;
+}
+
+.table-danger {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.table-danger:hover {
+  background-color: #f5c2c7 !important;
+}
+
+/* ============ 警告/提示框 ============ */
+
+.alert {
+  border-radius: 0.375rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  border-color: #ffecb5;
+  color: #664d03;
+}
+
+.alert-info {
+  background-color: #cfe2ff;
+  border-color: #b6d4fe;
+  color: #084298;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+  color: #842029;
+}
+
+/* ============ 徽章和标签 ============ */
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  vertical-align: baseline;
+}
+
+.badge.bg-info {
+  background-color: var(--info-color) !important;
+  color: white;
+}
+
+/* ============ 图表区域 ============ */
+
+#fireChart {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* ============ 响应式设计 ============ */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  #pageTitle {
+    font-size: 1.75rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .form-label {
+    font-size: 0.95rem;
+  }
+
+  .form-control,
+  .input-group input {
+    font-size: 16px; /* iOS缩放避免 */
+    min-height: 44px;
+  }
+
+  .table {
+    font-size: 0.85rem;
+  }
+
+  .table thead th,
+  .table tbody td {
+    padding: 0.6rem 0.4rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .btn-lg {
+    padding: 0.7rem 1.4rem;
+    font-size: 1rem;
+  }
+
+  .input-group {
+    flex-wrap: wrap;
+  }
+
+  .input-group input {
+    flex-basis: 100%;
+  }
+
+  .input-group button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 15px;
+    border-radius: 0.75rem;
+  }
+
+  body {
+    padding: 10px 0;
+  }
+
+  #pageTitle {
+    font-size: 1.5rem;
+  }
+
+  .row {
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+  }
+
+  .col-lg-4 {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .table {
+    font-size: 0.75rem;
+  }
+
+  .table thead th,
+  .table tbody td {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .btn-sm {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* ============ 打印样式 ============ */
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .container {
+    box-shadow: none;
+    border: none;
+  }
+
+  .row:not(#resultSection, #chartSection) {
+    display: none;
+  }
+
+  .btn {
+    display: none;
+  }
+}
+
+/* ============ 工具类 ============ */
+
+.text-muted {
+  color: #6c757d;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+/* ============ 二维码区域 ============ */
+
+.bg-gradient {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.qrcode-container {
+  display: inline-block;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.qrcode-image {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qrcode-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ============ 移动端二维码样式 ============ */
+
+@media (max-width: 768px) {
+  .qrcode-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .qrcode-container {
+    padding: 10px;
+  }
+}
